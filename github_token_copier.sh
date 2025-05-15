@@ -1,4 +1,8 @@
-#! /bin/bash
+#!/bin/bash
 
+PASS=$GITHUB_TOKEN_FILE_PASSWORD
 
-cat /home/vinicius/Desenvolvimento/.passwords/github_token.txt | tr -d '\n' | xclip -selection clipoard
+cd /home/vinicius/Desenvolvimento/.passwords/
+7z x github_token.7z -p$PASS -o./
+cat github_token.txt | tr -d '\n' | xclip -selection clipboard
+rm -rf github_token.txt
