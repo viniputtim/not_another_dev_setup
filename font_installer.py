@@ -11,9 +11,10 @@ RESET = '\033[0m'
 
 class FontInstaller:
     def __init__(self):
-        self.zip_path = '/home/viniciuspm/Downloads'
+        self.user_path = '/home/vinicius'
+        self.project_path = os.path.join(self.user_path, 'Desenvolvimento/raylib_cpp_game_template')
+        self.zip_path = os.path.join(self.user_path, 'Downloads')
         self.extract_path = os.path.join(self.zip_path, 'fonts')
-        self.project_path = '/home/viniciuspm/Desenvolvimento/its_about_cards'
         self.fonts_path = os.path.join(self.project_path, 'resources/fonts')
         self.licenses_path = os.path.join(self.project_path, 'docs/LICENSES')
         self.fonts_list_path = os.path.join(self.project_path, 'source/data/fonts_list.cpp')

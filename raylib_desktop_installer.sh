@@ -1,8 +1,6 @@
 #!/bin/bash
 
 GREEN="\e[32m"
-BG_BLUE="\e[44m"
-BOLD="\e[1m"
 RESET="\e[0m"
 
 sudo apt install -y build-essential git
@@ -20,8 +18,4 @@ sudo ldconfig
 cd ../..
 rm -rf raylib/
 
-echo -e "${BOLD}${GREEN}${BG_BLUE}"
-echo "----------------------------------------"
-echo "  Program Finished! Raylib is installed  "
-echo "----------------------------------------"
-echo -e "${RESET}"
+echo "${GREEN}Program Finished: Raylib is installed!${RESET}"
